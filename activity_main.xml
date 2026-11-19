@@ -1,0 +1,29 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F3F6F5">
+ <LinearLayout android:orientation="vertical" android:padding="18dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+  <TextView android:text="দৈনিক ক্যাশ হিসাব" android:textSize="24sp" android:textStyle="bold" android:textColor="#123B2D" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  <TextView android:id="@+id/tvDate" android:textSize="14sp" android:textColor="#64756D" android:layout_marginTop="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  <LinearLayout android:orientation="vertical" android:padding="16dp" android:layout_marginTop="18dp" android:background="#FFFFFF" android:layout_width="match_parent" android:layout_height="wrap_content">
+   <TextView android:text="আজকের আয়" android:textColor="#66756F" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+   <TextView android:id="@+id/tvIncome" android:text="৳ ০" android:textColor="#087F5B" android:textStyle="bold" android:textSize="25sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+   <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E8EEEB" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+   <TextView android:text="আজকের খরচ" android:textColor="#66756F" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+   <TextView android:id="@+id/tvExpense" android:text="৳ ০" android:textColor="#C0392B" android:textStyle="bold" android:textSize="25sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+   <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#E8EEEB" android:layout_marginTop="10dp" android:layout_marginBottom="10dp"/>
+   <TextView android:text="বর্তমান ক্যাশ (শুরুর ক্যাশসহ)" android:textColor="#66756F" android:textSize="14sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+   <TextView android:id="@+id/tvCash" android:text="৳ ০" android:textColor="#174D9B" android:textStyle="bold" android:textSize="28sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  </LinearLayout>
+  <TextView android:text="নতুন হিসাব যোগ করুন" android:textStyle="bold" android:textSize="18sp" android:textColor="#173D30" android:layout_marginTop="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  <RadioGroup android:id="@+id/rgType" android:orientation="horizontal" android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+   <RadioButton android:id="@+id/rbIncome" android:text="আয়" android:checked="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+   <RadioButton android:id="@+id/rbExpense" android:text="খরচ" android:layout_marginStart="22dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  </RadioGroup>
+  <EditText android:id="@+id/etAmount" android:hint="টাকার পরিমাণ" android:inputType="numberDecimal" android:padding="13dp" android:background="#FFFFFF" android:layout_marginTop="6dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <EditText android:id="@+id/etNote" android:hint="বিবরণ (যেমন: বিক্রির টাকা / বাজার)" android:padding="13dp" android:background="#FFFFFF" android:layout_marginTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <Button android:id="@+id/btnAdd" android:text="হিসাব সংরক্ষণ করুন" android:textColor="#FFFFFF" android:backgroundTint="#087F5B" android:layout_marginTop="12dp" android:layout_width="match_parent" android:layout_height="52dp"/>
+  <Button android:id="@+id/btnOpening" android:text="শুরুর ক্যাশ সেট করুন" android:backgroundTint="#52665D" android:layout_width="match_parent" android:layout_height="48dp"/>
+  <TextView android:text="আজকের লেনদেন" android:textStyle="bold" android:textSize="18sp" android:textColor="#173D30" android:layout_marginTop="18dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  <TextView android:id="@+id/tvEmpty" android:text="এখনো কোনো লেনদেন যোগ করা হয়নি" android:textColor="#7B8983" android:padding="12dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <LinearLayout android:id="@+id/listTransactions" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+ </LinearLayout>
+</ScrollView>

@@ -1,0 +1,18 @@
+দৈনিক ক্যাশ হিসাব — মোবাইল দিয়ে APK Build
+
+গুরুত্বপূর্ণ: এই ZIP-এ সরাসরি APK নেই। GitHub Actions-এর বিনামূল্যের cloud runner দিয়ে APK build করার workflow যোগ করা হয়েছে।
+
+ধাপ:
+1. ফোনের Chrome থেকে https://github.com খুলে সাইন ইন/অ্যাকাউন্ট তৈরি করুন।
+2. New repository তৈরি করুন; নাম দিন DailyCashHisab; Public বা Private যেকোনোটি।
+3. Add file > Upload files নির্বাচন করে এই ZIP-টি ফোনে Extract করুন।
+4. Extract করা প্রজেক্টের ভেতরের সব ফাইল ও .github ফোল্ডার repository-র root-এ upload করুন। ZIP ফাইলটি নিজে upload করবেন না।
+5. Commit changes চাপুন।
+6. Repository-র Actions tab-এ যান। Build Android APK workflow নির্বাচন করে Run workflow চাপুন।
+7. Build সফল হলে workflow run খুলে নিচের Artifacts থেকে DailyCashHisab-debug-apk ডাউনলোড করুন।
+8. ZIP Extract করে app-debug.apk ফাইলে চাপুন এবং Android-এর অনুমতি দিয়ে Install করুন।
+
+নোট:
+- প্রথমবার GitHub Actions চালু করতে GitHub-এর verification/permission লাগতে পারে।
+- এটি debug APK; নিজের ফোনে ইনস্টল করার জন্য উপযুক্ত।
+- ডেটা ফোনেই SharedPreferences-এ থাকবে; অ্যাপ uninstall করলে ডেটা মুছে যেতে পারে।
